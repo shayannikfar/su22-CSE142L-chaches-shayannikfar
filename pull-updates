@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+git remote add upstream $(cat .starter_repo)  # You need to do this once each time you checkout a new lab. It will fail 
+                                              # harmlessly if you run it more than once.
+cp Lab.ipynb Lab.backup.ipynb                 # Backup your work.
+git commit -am "My progress so far."          # commit your work.
+git pull upstream main --allow-unrelated-histories -X theirs # pull the updates
